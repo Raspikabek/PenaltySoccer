@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class Goal : MonoBehaviour {
+	[SerializeField]
+	private GameController gameController;
 
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "Ball") {
-			Debug.Log ("GOAL!");
+			gameController.OnGoal.Invoke ();
 		}
 	}
 }
