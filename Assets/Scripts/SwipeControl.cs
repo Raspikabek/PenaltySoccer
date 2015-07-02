@@ -4,24 +4,22 @@ using System.Collections.Generic;
 
 public class SwipeControl : MonoBehaviour
 {
-	//variables for swipe input detection
-	private Vector3 fp; //First finger position
-	private Vector3 lp; //Last finger position
-	private float dragDistance;  //Distance needed for a swipe to register
+	[SerializeField]
+	private GameController gameController;
 	
-	//variables for determining the shot power and position
-	public float power;  //power at which the ball is shot
-	private Vector3 footballPos; //initial football position for replacing the ball at the same posiiton
+	private Vector3 fp;
+	private Vector3 lp;
+	private float dragDistance;
+	
+	public float power;
+	private Vector3 ballPosition;
 	private float factor = 34f; // keep this factor constant, also used to determine force of shot
 	
-	public bool canShoot = true;  //flag to check if shot can be taken
-	public int scorePlayer = 0;  //score of player
-	public int scoreOpponent = 0; //score of oponent
-	public int turn = 0;   //0 for striker, 1 for goalie
+	public bool canShoot = true;
 	public bool isGameOver = false; //flag for game over detection
 	Vector3 oppKickDir;   //direction at which the ball is kicked by opponent
 	public int shotsTaken = 0;  //number of rounds of penalties taken
-	private bool returned = true;  //flag to check if the ball is returned to its initial position
+	public bool returned = true;  //flag to check if the ball is returned to its initial position
 	public bool isKickedPlayer = false; //flag to check if the player has kicked the ball
 	public bool isKickedOpponent = false; //flag to check if the opponent has kicked the ball
 	
@@ -29,23 +27,10 @@ public class SwipeControl : MonoBehaviour
 		Time.timeScale = 1;    //set it to 1 on start so as to overcome the effects of restarting the game by script
 		dragDistance = Screen.height*20/100; //20% of the screen should be swiped to shoot
 		Physics.gravity = new Vector3(0, -20, 0); //reset the gravity of the ball to 20
-		footballPos = transform.position;  //store the initial position of the football
+		ballPosition = transform.position;  //store the initial position of the football
 	}
-	
-	// Update is called once per frame
-	void Update()
-	{
-		if(returned){     //check if the football is in its initial position
-			if(turn==0 && !isGameOver){ //if its users turn to shoot and if the game is not over
-				playerLogic();   //call the playerLogic fucntion
-			}
-			else if(turn==1 && !isGameOver){ //if its opponent's turn to shoot
-				opponentLogic(); //call the respective function
-			}
-		}
-	}
-	
-	void playerLogic(){
+
+	public void playerLogic(){
 		//Examine the touch inputs
 		foreach (Touch touch in Input.touches)
 		{
@@ -95,7 +80,7 @@ public class SwipeControl : MonoBehaviour
 				canShoot = false;
 				returned = false;
 				isKickedPlayer = true;
-				StartCoroutine(ReturnBall());
+				StartCoroutine(ReturnBall()); // INVOKE EVENT RETURNBALL
 			}
 			else
 			{   //It's a tap
@@ -104,22 +89,23 @@ public class SwipeControl : MonoBehaviour
 		}
 	}
 	
-	IEnumerator ReturnBall() {
-		yield return new WaitForSeconds(5.0f);  //set a delay of 5 seconds before the ball is returned
+	IEnumerator ReturnBall() {  // EVENT IN GAMECONTROLLER
+		yield return new WaitForSeconds(4.0f);  //set a delay of 5 seconds before the ball is returned
 		GetComponent<Rigidbody>().velocity = Vector3.zero;   //set the velocity of the ball to zero
 		GetComponent<Rigidbody>().angularVelocity = Vector3.zero;  //set its angular vel to zero
-		transform.position = footballPos;   //re positon it to initial position
+		transform.position = ballPosition;   //re positon it to initial position
 		//take turns in shooting
-		if(turn==1)      
-			turn=0;    
-		else if(turn==0)
-			turn=1;
-		canShoot =true;     //set the canshoot flag to true
+		if(gameController.turn==1)      
+			gameController.turn=0;    
+		else if(gameController.turn==0)
+			gameController.turn=1;
+		canShoot = true;     //set the canshoot flag to true
 		returned = true;     //set football returned flag to true as well
+		gameController.canGoal = true;
 	}
 	
 	
-	void opponentLogic(){
+	public void opponentLogic(){
 		//check for screen tap
 		int fingerCount = 0;
 		foreach (Touch touch in Input.touches) {

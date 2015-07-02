@@ -6,7 +6,7 @@ public class Goal : MonoBehaviour {
 	private GameController gameController;
 
 	void OnTriggerEnter(Collider other){
-		if (other.tag == "Ball") {
+		if (other.tag == "Ball" && gameController.canGoal) {
 			gameController.OnGoal.Invoke ();
 		}
 	}
