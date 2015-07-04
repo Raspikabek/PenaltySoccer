@@ -6,6 +6,7 @@ public class SwipeControl : MonoBehaviour
 {
 	[SerializeField]
 	private GameController gameController;
+	private AudioSource shootAudio;
 	
 	private Vector3 fp;
 	private Vector3 lp;
@@ -24,6 +25,7 @@ public class SwipeControl : MonoBehaviour
 	public bool isKickedOpponent = false; //flag to check if the opponent has kicked the ball
 	
 	void Start(){
+		shootAudio = GetComponent<AudioSource> ();
 		Time.timeScale = 1;    //set it to 1 on start so as to overcome the effects of restarting the game by script
 		dragDistance = Screen.height*20/100; //20% of the screen should be swiped to shoot
 		Physics.gravity = new Vector3(0, -20, 0); //reset the gravity of the ball to 20
@@ -47,7 +49,6 @@ public class SwipeControl : MonoBehaviour
 				
 				if (Mathf.Abs(lp.x - fp.x) > dragDistance || Mathf.Abs(lp.y - fp.y) > dragDistance)
 				{   //It's a drag
-					
 					//x and y repesent force to be added in the x, y axes.
 					float x = (lp.x - fp.x) / Screen.height * factor; 
 					float y = (lp.y-fp.y)/Screen.height*factor;
@@ -77,10 +78,11 @@ public class SwipeControl : MonoBehaviour
 						}
 					}
 				}
+				shootAudio.Play();
 				canShoot = false;
 				returned = false;
 				isKickedPlayer = true;
-				StartCoroutine(ReturnBall()); // INVOKE EVENT RETURNBALL
+				StartCoroutine(ReturnBall());
 			}
 			else
 			{   //It's a tap

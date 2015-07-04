@@ -14,8 +14,8 @@ public class GameController : MonoBehaviour {
 	public UnityEvent OnSafe;
 	public UnityEvent OnWin;
 	public UnityEvent OnLoose;
-	public Text countText;
-	public Text winText;
+	public RawImage winImage;
+	public Image goal1, goal2, goal3, goal4, goal5;
 	
 	public bool canGoal;
 	public int turn = 0; // 0 striker, 1 goalkeeper
@@ -38,8 +38,7 @@ public class GameController : MonoBehaviour {
 
 	void Start(){
 		count = 0;
-		SetCountText ();
-		winText.text = "";
+		hideUI ();
 	}
 
 	void Update(){
@@ -56,26 +55,45 @@ public class GameController : MonoBehaviour {
 	private void goalDetected(){
 		canGoal = false;
 		count = count + 1;
-		SetCountText ();
+		displayGoalCounter ();
+		//SetCountText ();
 
 		if (count >= 5) {
 			OnWin.Invoke();
 		}
 	}
 
-	private void SetCountText(){
-		countText.text = "Goal Count: " + count.ToString ();
+	private void winMatch(){
+		winImage.enabled = true;
+		StartCoroutine (RestartMatch ());
 	}
 
-	private void winMatch(){
-		winText.text = "YOU WIN!";
-		StartCoroutine (RestartMatch ());
+	private void displayGoalCounter(){
+		if (count == 1) {
+			goal1.enabled = true;
+		} else if (count == 2) {
+			goal2.enabled = true;
+		} else if (count == 3) {
+			goal3.enabled = true;	
+		} else if (count == 4) {
+			goal4.enabled = true;	
+		} else if (count == 5) {
+			goal5.enabled = true;
+		}
+	}
+
+	private void hideUI(){
+		winImage.enabled = false;
+		goal1.enabled = false;
+		goal2.enabled = false;
+		goal3.enabled = false;
+		goal4.enabled = false;
+		goal5.enabled = false;
 	}
 
 	IEnumerator RestartMatch(){
 		yield return new WaitForSeconds(4.0f);
 		count = 0;
-		SetCountText ();
-		winText.text = "";
+		hideUI ();
 	}
 }
