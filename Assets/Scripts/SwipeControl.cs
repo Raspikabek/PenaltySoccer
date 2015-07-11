@@ -79,9 +79,11 @@ public class SwipeControl : MonoBehaviour
 					}
 				}
 				shootAudio.Play();
+				gameController.OnShoot.Invoke();
 				canShoot = false;
 				returned = false;
 				isKickedPlayer = true;
+
 				StartCoroutine(ReturnBall());
 			}
 			else

@@ -1,0 +1,371 @@
+fileFormatVersion: 2
+guid: d013056249a5ba340b923665b6eee5b5
+timeCreated: 1436517098
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Geo
+    100002: //RootNode
+    100004: soccerplayer1:Head
+    100006: soccerplayer1:HeadTop_End
+    100008: soccerplayer1:Hips
+    100010: soccerplayer1:LeftArm
+    100012: soccerplayer1:LeftFoot
+    100014: soccerplayer1:LeftFootToeBase_End
+    100016: soccerplayer1:LeftForeArm
+    100018: soccerplayer1:LeftHand
+    100020: soccerplayer1:LeftHandIndex1
+    100022: soccerplayer1:LeftHandIndex2
+    100024: soccerplayer1:LeftHandIndex3
+    100026: soccerplayer1:LeftHandIndex4
+    100028: soccerplayer1:LeftHandMiddle1
+    100030: soccerplayer1:LeftHandMiddle2
+    100032: soccerplayer1:LeftHandMiddle3
+    100034: soccerplayer1:LeftHandMiddle4
+    100036: soccerplayer1:LeftHandPinky1
+    100038: soccerplayer1:LeftHandPinky2
+    100040: soccerplayer1:LeftHandPinky3
+    100042: soccerplayer1:LeftHandPinky4
+    100044: soccerplayer1:LeftHandRing1
+    100046: soccerplayer1:LeftHandRing2
+    100048: soccerplayer1:LeftHandRing3
+    100050: soccerplayer1:LeftHandRing4
+    100052: soccerplayer1:LeftHandThumb1
+    100054: soccerplayer1:LeftHandThumb2
+    100056: soccerplayer1:LeftHandThumb3
+    100058: soccerplayer1:LeftHandThumb4
+    100060: soccerplayer1:LeftLeg
+    100062: soccerplayer1:LeftShoulder
+    100064: soccerplayer1:LeftToeBase
+    100066: soccerplayer1:LeftUpLeg
+    100068: soccerplayer1:Neck
+    100070: soccerplayer1:Neck1
+    100072: soccerplayer1:RightArm
+    100074: soccerplayer1:RightFoot
+    100076: soccerplayer1:RightFootToeBase_End
+    100078: soccerplayer1:RightForeArm
+    100080: soccerplayer1:RightHand
+    100082: soccerplayer1:RightHandIndex1
+    100084: soccerplayer1:RightHandIndex2
+    100086: soccerplayer1:RightHandIndex3
+    100088: soccerplayer1:RightHandIndex4
+    100090: soccerplayer1:RightHandMiddle1
+    100092: soccerplayer1:RightHandMiddle2
+    100094: soccerplayer1:RightHandMiddle3
+    100096: soccerplayer1:RightHandMiddle4
+    100098: soccerplayer1:RightHandPinky1
+    100100: soccerplayer1:RightHandPinky2
+    100102: soccerplayer1:RightHandPinky3
+    100104: soccerplayer1:RightHandPinky4
+    100106: soccerplayer1:RightHandRing1
+    100108: soccerplayer1:RightHandRing2
+    100110: soccerplayer1:RightHandRing3
+    100112: soccerplayer1:RightHandRing4
+    100114: soccerplayer1:RightHandThumb1
+    100116: soccerplayer1:RightHandThumb2
+    100118: soccerplayer1:RightHandThumb3
+    100120: soccerplayer1:RightHandThumb4
+    100122: soccerplayer1:RightLeg
+    100124: soccerplayer1:RightShoulder
+    100126: soccerplayer1:RightToeBase
+    100128: soccerplayer1:RightUpLeg
+    100130: soccerplayer1:Spine
+    100132: soccerplayer1:Spine1
+    100134: soccerplayer1:Spine2
+    400000: Geo
+    400002: //RootNode
+    400004: soccerplayer1:Head
+    400006: soccerplayer1:HeadTop_End
+    400008: soccerplayer1:Hips
+    400010: soccerplayer1:LeftArm
+    400012: soccerplayer1:LeftFoot
+    400014: soccerplayer1:LeftFootToeBase_End
+    400016: soccerplayer1:LeftForeArm
+    400018: soccerplayer1:LeftHand
+    400020: soccerplayer1:LeftHandIndex1
+    400022: soccerplayer1:LeftHandIndex2
+    400024: soccerplayer1:LeftHandIndex3
+    400026: soccerplayer1:LeftHandIndex4
+    400028: soccerplayer1:LeftHandMiddle1
+    400030: soccerplayer1:LeftHandMiddle2
+    400032: soccerplayer1:LeftHandMiddle3
+    400034: soccerplayer1:LeftHandMiddle4
+    400036: soccerplayer1:LeftHandPinky1
+    400038: soccerplayer1:LeftHandPinky2
+    400040: soccerplayer1:LeftHandPinky3
+    400042: soccerplayer1:LeftHandPinky4
+    400044: soccerplayer1:LeftHandRing1
+    400046: soccerplayer1:LeftHandRing2
+    400048: soccerplayer1:LeftHandRing3
+    400050: soccerplayer1:LeftHandRing4
+    400052: soccerplayer1:LeftHandThumb1
+    400054: soccerplayer1:LeftHandThumb2
+    400056: soccerplayer1:LeftHandThumb3
+    400058: soccerplayer1:LeftHandThumb4
+    400060: soccerplayer1:LeftLeg
+    400062: soccerplayer1:LeftShoulder
+    400064: soccerplayer1:LeftToeBase
+    400066: soccerplayer1:LeftUpLeg
+    400068: soccerplayer1:Neck
+    400070: soccerplayer1:Neck1
+    400072: soccerplayer1:RightArm
+    400074: soccerplayer1:RightFoot
+    400076: soccerplayer1:RightFootToeBase_End
+    400078: soccerplayer1:RightForeArm
+    400080: soccerplayer1:RightHand
+    400082: soccerplayer1:RightHandIndex1
+    400084: soccerplayer1:RightHandIndex2
+    400086: soccerplayer1:RightHandIndex3
+    400088: soccerplayer1:RightHandIndex4
+    400090: soccerplayer1:RightHandMiddle1
+    400092: soccerplayer1:RightHandMiddle2
+    400094: soccerplayer1:RightHandMiddle3
+    400096: soccerplayer1:RightHandMiddle4
+    400098: soccerplayer1:RightHandPinky1
+    400100: soccerplayer1:RightHandPinky2
+    400102: soccerplayer1:RightHandPinky3
+    400104: soccerplayer1:RightHandPinky4
+    400106: soccerplayer1:RightHandRing1
+    400108: soccerplayer1:RightHandRing2
+    400110: soccerplayer1:RightHandRing3
+    400112: soccerplayer1:RightHandRing4
+    400114: soccerplayer1:RightHandThumb1
+    400116: soccerplayer1:RightHandThumb2
+    400118: soccerplayer1:RightHandThumb3
+    400120: soccerplayer1:RightHandThumb4
+    400122: soccerplayer1:RightLeg
+    400124: soccerplayer1:RightShoulder
+    400126: soccerplayer1:RightToeBase
+    400128: soccerplayer1:RightUpLeg
+    400130: soccerplayer1:Spine
+    400132: soccerplayer1:Spine1
+    400134: soccerplayer1:Spine2
+    4300000: Geo
+    7400000: goalkeeper_idle
+    9500000: //RootNode
+    13700000: Geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: goalkeeper_idle
+      takeName: mixamo.com
+      firstFrame: 0
+      lastFrame: 139
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Geo
+        weight: 1
+      - path: soccerplayer1:Hips
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:LeftUpLeg
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:LeftUpLeg/soccerplayer1:LeftLeg
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:LeftUpLeg/soccerplayer1:LeftLeg/soccerplayer1:LeftFoot
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:LeftUpLeg/soccerplayer1:LeftLeg/soccerplayer1:LeftFoot/soccerplayer1:LeftToeBase
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:LeftUpLeg/soccerplayer1:LeftLeg/soccerplayer1:LeftFoot/soccerplayer1:LeftToeBase/soccerplayer1:LeftFootToeBase_End
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:RightUpLeg
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:RightUpLeg/soccerplayer1:RightLeg
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:RightUpLeg/soccerplayer1:RightLeg/soccerplayer1:RightFoot
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:RightUpLeg/soccerplayer1:RightLeg/soccerplayer1:RightFoot/soccerplayer1:RightToeBase
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:RightUpLeg/soccerplayer1:RightLeg/soccerplayer1:RightFoot/soccerplayer1:RightToeBase/soccerplayer1:RightFootToeBase_End
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandIndex1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandIndex1/soccerplayer1:LeftHandIndex2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandIndex1/soccerplayer1:LeftHandIndex2/soccerplayer1:LeftHandIndex3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandIndex1/soccerplayer1:LeftHandIndex2/soccerplayer1:LeftHandIndex3/soccerplayer1:LeftHandIndex4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandMiddle1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandMiddle1/soccerplayer1:LeftHandMiddle2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandMiddle1/soccerplayer1:LeftHandMiddle2/soccerplayer1:LeftHandMiddle3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandMiddle1/soccerplayer1:LeftHandMiddle2/soccerplayer1:LeftHandMiddle3/soccerplayer1:LeftHandMiddle4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandPinky1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandPinky1/soccerplayer1:LeftHandPinky2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandPinky1/soccerplayer1:LeftHandPinky2/soccerplayer1:LeftHandPinky3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandPinky1/soccerplayer1:LeftHandPinky2/soccerplayer1:LeftHandPinky3/soccerplayer1:LeftHandPinky4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandRing1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandRing1/soccerplayer1:LeftHandRing2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandRing1/soccerplayer1:LeftHandRing2/soccerplayer1:LeftHandRing3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandRing1/soccerplayer1:LeftHandRing2/soccerplayer1:LeftHandRing3/soccerplayer1:LeftHandRing4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandThumb1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandThumb1/soccerplayer1:LeftHandThumb2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandThumb1/soccerplayer1:LeftHandThumb2/soccerplayer1:LeftHandThumb3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:LeftShoulder/soccerplayer1:LeftArm/soccerplayer1:LeftForeArm/soccerplayer1:LeftHand/soccerplayer1:LeftHandThumb1/soccerplayer1:LeftHandThumb2/soccerplayer1:LeftHandThumb3/soccerplayer1:LeftHandThumb4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:Neck
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:Neck/soccerplayer1:Neck1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:Neck/soccerplayer1:Neck1/soccerplayer1:Head
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:Neck/soccerplayer1:Neck1/soccerplayer1:Head/soccerplayer1:HeadTop_End
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandIndex1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandIndex1/soccerplayer1:RightHandIndex2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandIndex1/soccerplayer1:RightHandIndex2/soccerplayer1:RightHandIndex3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandIndex1/soccerplayer1:RightHandIndex2/soccerplayer1:RightHandIndex3/soccerplayer1:RightHandIndex4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandMiddle1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandMiddle1/soccerplayer1:RightHandMiddle2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandMiddle1/soccerplayer1:RightHandMiddle2/soccerplayer1:RightHandMiddle3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandMiddle1/soccerplayer1:RightHandMiddle2/soccerplayer1:RightHandMiddle3/soccerplayer1:RightHandMiddle4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandPinky1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandPinky1/soccerplayer1:RightHandPinky2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandPinky1/soccerplayer1:RightHandPinky2/soccerplayer1:RightHandPinky3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandPinky1/soccerplayer1:RightHandPinky2/soccerplayer1:RightHandPinky3/soccerplayer1:RightHandPinky4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandRing1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandRing1/soccerplayer1:RightHandRing2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandRing1/soccerplayer1:RightHandRing2/soccerplayer1:RightHandRing3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandRing1/soccerplayer1:RightHandRing2/soccerplayer1:RightHandRing3/soccerplayer1:RightHandRing4
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandThumb1
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandThumb1/soccerplayer1:RightHandThumb2
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandThumb1/soccerplayer1:RightHandThumb2/soccerplayer1:RightHandThumb3
+        weight: 1
+      - path: soccerplayer1:Hips/soccerplayer1:Spine/soccerplayer1:Spine1/soccerplayer1:Spine2/soccerplayer1:RightShoulder/soccerplayer1:RightArm/soccerplayer1:RightForeArm/soccerplayer1:RightHand/soccerplayer1:RightHandThumb1/soccerplayer1:RightHandThumb2/soccerplayer1:RightHandThumb3/soccerplayer1:RightHandThumb4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

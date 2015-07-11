@@ -8,7 +8,10 @@ public class GameController : MonoBehaviour {
 
 	[SerializeField]
 	private SwipeControl swipeControl;
+	[SerializeField]
+	private GoalKeeperController goalKeeperController;
 
+	public UnityEvent OnShoot;
 	public UnityEvent OnGoal;
 	public UnityEvent OnMiss;
 	public UnityEvent OnSafe;
@@ -23,6 +26,7 @@ public class GameController : MonoBehaviour {
 	private int count;
 
 	public GameController(){
+		OnShoot = new UnityEvent ();
 		OnGoal = new UnityEvent ();
 		OnMiss = new UnityEvent ();
 		OnSafe = new UnityEvent ();
@@ -31,6 +35,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void Awake(){
+		OnShoot.AddListener (moveGoalKeeper);
 		OnGoal.AddListener (goalDetected);
 		OnWin.AddListener (winMatch);
 		canGoal = true;
@@ -61,6 +66,18 @@ public class GameController : MonoBehaviour {
 		if (count >= 5) {
 			OnWin.Invoke();
 		}
+	}
+
+	private void moveGoalKeeper(){
+		bool jump = goalKeeperController.jump;
+
+		if (!jump) {
+			jump = true;
+		} else {
+			jump = false;
+		}
+
+		goalKeeperController.jump = true;
 	}
 
 	private void winMatch(){
