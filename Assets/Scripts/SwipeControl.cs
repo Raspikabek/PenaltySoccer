@@ -59,11 +59,15 @@ public class SwipeControl : MonoBehaviour
 						
 						if ((lp.x>fp.x) && canShoot)  //If the movement was to the right)
 						{   //Right move
-							GetComponent<Rigidbody>().AddForce((new Vector3(x,10,15))*power); 
+							GetComponent<Rigidbody>().AddForce((new Vector3(x,10,15))*power);
+							gameController.ballDirection = true;
+							gameController.OnShoot.Invoke();
 						}
 						else
 						{   //Left move
 							GetComponent<Rigidbody>().AddForce((new Vector3(x,10,15))*power);
+							gameController.ballDirection = false;
+							gameController.OnShoot.Invoke();
 						}
 					}
 					else

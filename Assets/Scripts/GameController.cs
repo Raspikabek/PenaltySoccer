@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 	public UnityEvent OnLoose;
 	public RawImage winImage;
 	public Image goal1, goal2, goal3, goal4, goal5;
+	public bool ballDirection;
 	
 	public bool canGoal;
 	public int turn = 0; // 0 striker, 1 goalkeeper
@@ -69,15 +70,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void moveGoalKeeper(){
-		bool jump = goalKeeperController.jump;
-
-		if (!jump) {
-			jump = true;
-		} else {
-			jump = false;
-		}
-
-		goalKeeperController.jump = true;
+		goalKeeperController.goalKeeperJump (ballDirection);
 	}
 
 	private void winMatch(){

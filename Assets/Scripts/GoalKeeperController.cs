@@ -4,16 +4,22 @@ using System.Collections;
 public class GoalKeeperController : MonoBehaviour {
 
 	Animator anim;
-	int jumpHash = Animator.StringToHash("Jump");
+	int jumpLeftHash = Animator.StringToHash("JumpLeft");
+	int jumpLongLeftHash = Animator.StringToHash ("JumpLongLeft");
+	int jumpRightHash = Animator.StringToHash ("JumpRight");
+	int jumpLongRightHash = Animator.StringToHash ("JumpLongRight");
 	public bool jump = false;
 
 	void Start(){
 		anim = GetComponent<Animator> ();
+
 	}
 
-	void Update(){
-		if(jump == true){
-			anim.SetTrigger (jumpHash);
+	public void goalKeeperJump(bool ballDirection){
+		if (ballDirection) {
+			anim.SetTrigger (jumpLongRightHash);
+		} else {
+			anim.SetTrigger (jumpLongLeftHash);
 		}
 	}
 }
