@@ -5,12 +5,13 @@ using UnityEngine.Events;
 using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
-
+	
 	[SerializeField]
-	private SwipeControl swipeControl;
+	private NewSwipeControl _newSwipeControl;
 	[SerializeField]
 	private GoalKeeperController goalKeeperController;
-
+	private int count;
+	
 	public UnityEvent OnShoot;
 	public UnityEvent OnGoal;
 	public UnityEvent OnMiss;
@@ -19,12 +20,9 @@ public class GameController : MonoBehaviour {
 	public UnityEvent OnLoose;
 	public RawImage winImage;
 	public Image goal1, goal2, goal3, goal4, goal5;
-	public bool ballDirection;
-	
+	public bool canShoot = true;
 	public bool canGoal;
-	public int turn = 0; // 0 striker, 1 goalkeeper
 
-	private int count;
 
 	public GameController(){
 		OnShoot = new UnityEvent ();
@@ -36,32 +34,30 @@ public class GameController : MonoBehaviour {
 	}
 
 	void Awake(){
-		OnShoot.AddListener (moveGoalKeeper);
-		OnGoal.AddListener (goalDetected);
-		OnWin.AddListener (winMatch);
+		OnGoal.AddListener (GoalDetected);
+		OnWin.AddListener (WinMatch);
 		canGoal = true;
 	}
 
 	void Start(){
 		count = 0;
-		hideUI ();
+		HideUI ();
 	}
 
 	void Update(){
-		if(swipeControl.returned){     //check if the football is in its initial position
-			if(turn==0 && !swipeControl.isGameOver){ //if its users turn to shoot and if the game is not over
-				swipeControl.playerLogic();   //call the playerLogic fucntion
-			}
-			else if(turn==1 && !swipeControl.isGameOver){ //if its opponent's turn to shoot
-				swipeControl.opponentLogic(); //call the respective function
-			}
+		if(_newSwipeControl.ballReturned && canShoot){
+			_newSwipeControl.PlayerLogic();
 		}
 	}
 
-	private void goalDetected(){
+	public void MoveGoalKeeper(int shootDirection){
+		goalKeeperController.GoalKeeperJump(shootDirection);
+	}
+	
+	private void GoalDetected(){
 		canGoal = false;
 		count = count + 1;
-		displayGoalCounter ();
+		DisplayGoalCounter ();
 		//SetCountText ();
 
 		if (count >= 5) {
@@ -69,16 +65,12 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	private void moveGoalKeeper(){
-		goalKeeperController.goalKeeperJump (ballDirection);
-	}
-
-	private void winMatch(){
+	private void WinMatch(){
 		winImage.enabled = true;
 		StartCoroutine (RestartMatch ());
 	}
 
-	private void displayGoalCounter(){
+	private void DisplayGoalCounter(){
 		if (count == 1) {
 			goal1.enabled = true;
 		} else if (count == 2) {
@@ -92,7 +84,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	private void hideUI(){
+	private void HideUI(){
 		winImage.enabled = false;
 		goal1.enabled = false;
 		goal2.enabled = false;
@@ -104,6 +96,6 @@ public class GameController : MonoBehaviour {
 	IEnumerator RestartMatch(){
 		yield return new WaitForSeconds(4.0f);
 		count = 0;
-		hideUI ();
+		HideUI ();
 	}
 }
