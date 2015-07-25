@@ -12,6 +12,9 @@ public class NewSwipeControl : MonoBehaviour {
 	private Vector3 startPos;
 	private Vector3 endPos;
 	private float dragDistance;
+	private float xPos;
+	private float yPos;
+	private int shootDirection;
 
 	private Vector3 defaultBallPosition;
 	private float factor = 34f; // keep this factor constant, also used to determine force of shot
@@ -28,7 +31,7 @@ public class NewSwipeControl : MonoBehaviour {
 	}
 
 	public void PlayerLogic(){
-		//NEW FUNCTION
+
 		if (Input.touchCount > 0){
 			var touch = Input.GetTouch(0);
 
@@ -41,21 +44,21 @@ public class NewSwipeControl : MonoBehaviour {
 				endPos = touch.position;
 
 				if(Mathf.Abs(endPos.x - startPos.x) > dragDistance || Mathf.Abs(endPos.y - startPos.y) > dragDistance){
-					float x = (endPos.x - startPos.x) / Screen.height * factor;
-					float y = (endPos.y - startPos.y) / Screen.height * factor;
-					int shootDirection;
+					xPos = (endPos.x - startPos.x) / Screen.height * factor;
+					yPos = (endPos.y - startPos.y) / Screen.height * factor;
 
 					if(Mathf.Abs(endPos.x - startPos.x) > Mathf.Abs(endPos.y - startPos.y)){
 						//If the horizontal movement is greater than the vertical...
 						if((endPos.x > startPos.x)){ 
 							//Right move
 							shootDirection = 25;
-							ShootBall(x,y,shootDirection);
+							//ShootBall(xPos,yPos,shootDirection);
 						}
 						else{
 							//Left move
 							shootDirection = 75;
-							ShootBall(x,y,shootDirection);						}
+							//ShootBall(xPos,yPos,shootDirection);	
+						}
 					}
 					else{ // If the vertical movement is greater than the horizontal movement...
 						if (endPos.y > startPos.y){
@@ -66,22 +69,25 @@ public class NewSwipeControl : MonoBehaviour {
 							else{
 								shootDirection = 75;
 							}
-							ShootBall(x,y,shootDirection);						}
+								//ShootBall(xPos,yPos,shootDirection);		
+						}
 						else{
 							//Down move
 						}
 					}
 				}
+				gameController.MoveSoccerPlayer();
 				break;
 			}
 		}
 	}
 
-	private void ShootBall(float x, float y, int shootDirection){
-		rb.AddForce(( new Vector3(x,y,15)) * power);
+	public void ShootBall(){
+		rb.AddForce(( new Vector3(xPos,yPos,15)) * power);
 		gameController.MoveGoalKeeper(shootDirection);
 		shootAudio.Play();
 		gameController.canShoot = false;
+		gameController.shootsTaken++;
 		ballReturned = false;
 		StartCoroutine(ReturnBall());
 }

@@ -9,19 +9,24 @@ public class GameController : MonoBehaviour {
 	[SerializeField]
 	private NewSwipeControl _newSwipeControl;
 	[SerializeField]
-	private GoalKeeperController goalKeeperController;
-	private int count;
+	private GoalKeeperController _goalKeeperController;
+	[SerializeField]
+	private SoccerPlayerController _soccerPlayerController;
+	private int goalCount;
 	
 	public UnityEvent OnShoot;
 	public UnityEvent OnGoal;
 	public UnityEvent OnMiss;
 	public UnityEvent OnSafe;
-	public UnityEvent OnWin;
+	public UnityEvent OnFinish;
 	public UnityEvent OnLoose;
 	public RawImage winImage;
+	public RawImage looseImage;
 	public Image goal1, goal2, goal3, goal4, goal5;
+	public int shootsTaken;
 	public bool canShoot = true;
 	public bool canGoal;
+	public bool winState;
 
 
 	public GameController(){
@@ -29,18 +34,21 @@ public class GameController : MonoBehaviour {
 		OnGoal = new UnityEvent ();
 		OnMiss = new UnityEvent ();
 		OnSafe = new UnityEvent ();
-		OnWin = new UnityEvent ();
+		OnFinish = new UnityEvent ();
 		OnLoose = new UnityEvent ();
 	}
 
 	void Awake(){
 		OnGoal.AddListener (GoalDetected);
-		OnWin.AddListener (WinMatch);
+		//OnFinish.AddListener (WinMatch);
+		//OnFinish.AddListener (_goalKeeperController.MatchEndedMove);
+		//OnFinish.AddListener (_soccerPlayerController.MatchEndedMove);
 		canGoal = true;
 	}
 
 	void Start(){
-		count = 0;
+		goalCount = 0;
+		shootsTaken = 0;
 		HideUI ();
 	}
 
@@ -51,19 +59,40 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void MoveGoalKeeper(int shootDirection){
-		goalKeeperController.GoalKeeperJump(shootDirection);
+		_goalKeeperController.GoalKeeperJump(shootDirection);
+	}
+
+	public void MoveSoccerPlayer(){
+		_soccerPlayerController.MoveSoccerPlayer();
 	}
 	
 	private void GoalDetected(){
+		//TODO REFACTOR THIS & WinMatch + LooseMatch functions
 		canGoal = false;
-		count = count + 1;
+		goalCount++;
 		DisplayGoalCounter ();
-		//SetCountText ();
 
-		if (count >= 5) {
-			OnWin.Invoke();
+		if(goalCount >= 3){
+			WinMatch();
 		}
 	}
+
+	/*private void MatchFinished(){
+		if(goalCount >= 3){
+			winImage.enabled = true;
+			winState = true;
+			StartCoroutine(RestartMatch ());
+			_goalKeeperController.MatchEndedMove();
+			_soccerPlayerController.MatchEndedMove();
+		}
+		else if (shootsTaken == 5 && goalCount < 3){
+			looseImage.enabled = true;
+			winState = false;
+			StartCoroutine(RestartMatch());
+			_goalKeeperController.MatchEndedMove();
+			_soccerPlayerController.MatchEndedMove();
+		}
+	}*/
 
 	private void WinMatch(){
 		winImage.enabled = true;
@@ -71,21 +100,22 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void DisplayGoalCounter(){
-		if (count == 1) {
+		if (goalCount == 1) {
 			goal1.enabled = true;
-		} else if (count == 2) {
+		} else if (goalCount == 2) {
 			goal2.enabled = true;
-		} else if (count == 3) {
+		} else if (goalCount == 3) {
 			goal3.enabled = true;	
-		} else if (count == 4) {
+		} else if (goalCount == 4) {
 			goal4.enabled = true;	
-		} else if (count == 5) {
+		} else if (goalCount == 5) {
 			goal5.enabled = true;
 		}
 	}
 
 	private void HideUI(){
 		winImage.enabled = false;
+		looseImage.enabled = false;
 		goal1.enabled = false;
 		goal2.enabled = false;
 		goal3.enabled = false;
@@ -95,7 +125,8 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator RestartMatch(){
 		yield return new WaitForSeconds(4.0f);
-		count = 0;
+		goalCount = 0;
+		shootsTaken = 0;
 		HideUI ();
 	}
 }

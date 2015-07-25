@@ -3,16 +3,19 @@ using System.Collections;
 
 public class GoalKeeperController : MonoBehaviour {
 
+	[SerializeField]
+	private GameController _gameController;
 	Animator anim;
-	int jumpLeftHash = Animator.StringToHash("JumpLeft");
-	int jumpLongLeftHash = Animator.StringToHash ("JumpLongLeft");
-	int jumpRightHash = Animator.StringToHash ("JumpRight");
-	int jumpLongRightHash = Animator.StringToHash ("JumpLongRight");
-	public bool jump = false;
+	private int jumpLeftHash = Animator.StringToHash("JumpLeft");
+	private int jumpLongLeftHash = Animator.StringToHash ("JumpLongLeft");
+	private int jumpRightHash = Animator.StringToHash ("JumpRight");
+	private int jumpLongRightHash = Animator.StringToHash ("JumpLongRight");
+	private int victoryHash = Animator.StringToHash ("VictoryGK");
+	private int defeatedHash = Animator.StringToHash ("DefeatedGK");
 
-	void Start(){
+	void Awake(){
+		_gameController = GetComponent<GameController>();
 		anim = GetComponent<Animator> ();
-
 	}
 
 	public void GoalKeeperJump(int shootDirection){
@@ -33,6 +36,15 @@ public class GoalKeeperController : MonoBehaviour {
 			case 100:
 			anim.SetTrigger(jumpLeftHash);
 			break;
+		}
+	}
+
+	public void MatchEndedMove(){
+		if (_gameController.winState == true){
+			anim.SetTrigger(victoryHash);
+		}
+		else{
+			anim.SetTrigger(defeatedHash);
 		}
 	}
 }
